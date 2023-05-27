@@ -67,7 +67,7 @@
 
                                 <tr>
                                     <td> gender</td>
-                                    <td> {{ $user->gender }}</td>
+                                    <td> {{ $user->genderTitle }}</td>
                                 </tr>
 
                                 <tr>

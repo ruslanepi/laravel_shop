@@ -15,6 +15,8 @@
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="{{ asset('adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
     <link rel="stylesheet" href="{{ asset('adminlte/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('adminlte/plugins/select2/css/select2.min.css')}}">
+
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
 </head>
@@ -146,7 +148,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="pages/gallery.html" class="nav-link">
+                        <a href="{{route('product.index')}}" class="nav-link">
                             <i class="nav-icon far fa-image"></i>
                             <p>
                                 Products
@@ -232,7 +234,14 @@
 <!-- AdminLTE App -->
 <script src="{{asset('adminlte/dist/js/adminlte.js')}}"></script>
 <script src="{{asset('adminlte/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js')}}"></script>
+<script src="{{asset('adminlte/plugins/select2/js/select2.full.min.js')}}"></script>
+
 <script>
+    //select2
+    $('.tags').select2()
+    $('.colors').select2()
+
+
     //Colorpicker
     //color picker with addon
     $('.my-colorpicker2').colorpicker()
